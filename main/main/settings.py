@@ -25,7 +25,7 @@ SECRET_KEY = '74dc19d0c6b8007650912a60423a47571b1d6227d5aed7bfc15ff41cacdc36e1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["gorgeous-fox-incredibly.ngrok-free.app"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
