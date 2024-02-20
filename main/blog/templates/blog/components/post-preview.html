@@ -1,0 +1,14 @@
+<!-- Post preview-->
+<div class="post-preview">
+    <a href="{{ topic.get_absolute_url }}">
+        <h2 class="post-title">{{ topic.title|upper }}</h2>
+        <h3 class="post-subtitle">{{ topic.body|truncatechars:50 }}</h3>
+    </a>
+    <p class="post-meta">
+        Posted by
+        <a href="#!">Start Bootstrap</a>
+        {{ topic.date_created|date:'F, d Y' }}
+    </p>
+</div>
+<!-- Divider-->
+<hr class="my-4" />

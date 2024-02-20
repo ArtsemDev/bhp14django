@@ -3,6 +3,7 @@ from typing import TYPE_CHECKING
 
 from django.core import validators
 from django.db import models
+from django.urls import reverse
 from django.utils.timezone import now
 
 
@@ -57,6 +58,7 @@ class Topic(models.Model):
         category_id: int
         is_published: bool
     else:
+        tag = models.CharField(max_length=32, null=True, blank=True)
         title = models.CharField(
             max_length=128,
             null=False,
@@ -114,3 +116,6 @@ class Topic(models.Model):
         # indexes = [
         #     models.Index(fields=["category", "is_published"])
         # ]
+
+    def get_absolute_url(self) -> str:
+        return reverse(viewname="topic_detail", kwargs={"slug": self.slug})

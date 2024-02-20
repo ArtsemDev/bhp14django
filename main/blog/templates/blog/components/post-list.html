@@ -1,0 +1,7 @@
+{% for obj in topic_list %}
+    {% with topic=obj %}
+        {% include 'blog/components/post-preview.html' %}
+    {% endwith %}
+{% empty %}
+TOPICS NOT FOUND
+{% endfor %}
